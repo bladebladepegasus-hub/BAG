@@ -1,0 +1,3 @@
+<FilesMatch "^(configuracion_usuario|pruebas_revision|pruebas_region|config|config_local|conexion|comun|datos_demo|catalogo|catalogo_online|cuentas_esquema|pruebas_cuentas|clasificaciones|migrar_clasificacion|pruebas_clasificaciones|tiendas_extra|recomendador_online|filtro_edad|filtro_seguridad|detectar_intencion|consejos|guardar_mensaje|ia_openai|ia_herramientas|pruebas|pruebas_ia)\.php$">
+    Require all denied
+</FilesMatch>

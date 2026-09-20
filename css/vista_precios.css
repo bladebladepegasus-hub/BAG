@@ -1,0 +1,3 @@
+@import url('comun.css?v=20260913.region');
+.price-intro{max-width:750px}.price-info{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}.price-info p{font-size:12px;margin:0}.price-info h3{font-size:14px}@media(max-width:760px){.price-info{grid-template-columns:1fr}}
+.price-cover{width:240px;max-width:100%;border-radius:12px;margin-bottom:16px;object-fit:cover}.price-panel{margin-top:20px}

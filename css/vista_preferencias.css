@@ -1,0 +1,2 @@
+@import url('comun.css?v=20260913.region');
+.preferences-layout{display:grid;grid-template-columns:1.5fr 1fr;gap:25px}.preferences-layout aside h3{font-size:17px}.preferences-layout aside p{font-size:12px}.preferences-layout form .btn{margin-top:25px}.privacy-icon{color:var(--green);margin-bottom:18px}.privacy-icon .icon{width:35px;height:35px}@media(max-width:950px){.preferences-layout{grid-template-columns:1fr}}

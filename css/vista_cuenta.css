@@ -1,0 +1,2 @@
+@import url('comun.css?v=20260913.region');
+.account-panel{max-width:600px;margin:auto}.account-tabs,.account-actions{display:flex;gap:12px;flex-wrap:wrap}.account-tabs{margin-bottom:26px}.account-panel .field{margin:18px 0}.account-panel form>.btn{width:100%;margin-top:10px}.guest-link{display:inline-block;margin-top:24px}.account-panel small{color:var(--muted,#a8b3cc)}[hidden]{display:none!important}

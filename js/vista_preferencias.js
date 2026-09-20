@@ -1,0 +1,6 @@
+'use strict';
+const formulario=document.querySelector('#preferencias-form');
+BAG.ready.then(s=>{if(!s)return;for(const k of ['nombre','clasificacion_maxima','plataforma','genero','modo_juego','region','idioma','tema'])formulario.elements[k].value=s.profile[k]??(k==='clasificacion_maxima'?'A':'');});
+formulario.addEventListener('submit',async e=>{e.preventDefault();const b=formulario.querySelector('button');b.disabled=true;try{await BAG.ready;const d=await BAG.api('guardar_preferencias.php',Object.fromEntries(new FormData(formulario)));BAGConfig.aplicar(Object.fromEntries(new FormData(formulario)));try{localStorage.setItem('bag-settings-change',String(Date.now()));}catch{}document.querySelector('#region-actual').textContent=BAGConfig.regiones[formulario.elements.region.value];BAG.aviso(d.message);const indicador=document.querySelector("#clasificacion-actual");if(indicador)indicador.textContent="Clasificación máxima: "+formulario.elements.clasificacion_maxima.value;document.querySelector('#nombre-usuario').textContent=formulario.elements.nombre.value||'Invitado';}catch(err){BAG.aviso(err.message,true);}finally{b.disabled=false;}});
+
+for(const k of ['tema','idioma'])formulario.elements[k].addEventListener('change',()=>BAGConfig.aplicar({[k]:formulario.elements[k].value},false));
